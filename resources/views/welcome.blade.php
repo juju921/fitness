@@ -11,17 +11,13 @@
     <link rel="stylesheet" href="style/vendor.css">
     <link rel="stylesheet" href="style/custom.css">
 </head>
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Welcome</div>
+    @foreach($salles as $salle)
+        <ul>
+            <li>{{$salle->nom}}</li>
+            <li>{{$salle->email}}</li>
+            <li>{{$salle->adresse}}</li>
+            <li>{{$salle->nom}}</li>
+        </ul>
+@endforeach
 
-                <div class="panel-body">
-                    Your Application's Landing Page.
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 

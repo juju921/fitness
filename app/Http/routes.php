@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::resource('salle', 'sallesController');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

@@ -151,6 +151,7 @@ return [
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+
         /*
          * Application Service Providers...
          */
@@ -206,6 +207,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Form'=> 'Illuminate\Html\FormFacade',
+        'HTML'=> 'Illuminate\Html\HtmlFacade',
 
     ],
 
