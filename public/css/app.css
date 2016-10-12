@@ -1,9 +1,8 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 /* Great Vibes */
 @import url(http://fonts.googleapis.com/css?family=Great+Vibes);
-
-.logo{
+.logo {
   font-family: 'Great Vibes', cursive;
   font-size: 3.5em;
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=app.css.map */

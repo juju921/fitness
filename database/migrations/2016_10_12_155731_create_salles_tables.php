@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSallesTable extends Migration
+class CreateSallesTables extends Migration
 {
     /**
      * Run the migrations.

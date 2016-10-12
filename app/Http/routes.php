@@ -18,6 +18,7 @@ Route::get('/', function () {
 
 Route::resource('salle', 'sallesController');
 
+
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');

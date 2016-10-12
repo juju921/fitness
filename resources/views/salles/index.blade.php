@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<html lang="en" ng-app="fitness">
+<html lang="fr" ng-app="fitness">
 <title>Ummaspot</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

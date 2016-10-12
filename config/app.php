@@ -150,7 +150,7 @@ return [
         LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
