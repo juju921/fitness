@@ -1,6 +1,6 @@
-'use strict'
+angular.module('index', [])
 
-    .controller('index', function($scope, $auth, $modal, $http, $location){
+    .controller('index', function($scope, $auth, $uibModal, $http, $location){
 
         $scope.alerts = [];
         $scope.closeAlert = function(index) {
@@ -79,7 +79,7 @@
         $scope.loginModal = function (size) {
             $scope.modalInstance = $modal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: 'angular/_shared/login.html',
+                templateUrl: '_inc/login.html',
                 size: size,
                 scope: $scope
             });
