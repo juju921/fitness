@@ -15,7 +15,7 @@ elixir(function(mix) {
     mix.sass('app.scss')
         .copy('node_modules/jquery/dist/jquery.min.js','public/js')
         .copy('node_modules/angular/angular.js','public/js')
-        .copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.js','public/js')
+        .copy('bower_components/angular-bootstrap/ui-bootstrap.js','public/js')
         .copy('node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js','public/js')
         .copy('node_modules/angular-ui-router/release/angular-ui-router.min.js','public/js')
         .copy('node_modules/restangular/dist/restangular.js','public/js')
