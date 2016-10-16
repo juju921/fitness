@@ -77,9 +77,9 @@ angular.module('index', [])
 
 
         $scope.loginModal = function (size) {
-            $scope.modalInstance = $modal.open({
+            $scope.modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
-                templateUrl: '_inc/login.html',
+                templateUrl: 'app/_inc/login.html',
                 size: size,
                 scope: $scope
             });

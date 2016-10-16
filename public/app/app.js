@@ -5,6 +5,7 @@ angular.module('app',[
     'restangular',
     'satellizer',
     'angularFileUpload',
+	'app.home'
     // 'angular-stripe',
     // 'credit-cards'
 	])
@@ -13,6 +14,11 @@ angular.module('app',[
 .config(['$stateProvider', '$urlRouterProvider', 'RestangularProvider', '$authProvider',
     function($stateProvider, $urlRouterProvider, RestangularProvider, $authProvider) {
         $stateProvider.
+		state('home', {
+			url: '/',
+			templateUrl: 'app/home/header.html',
+			controller: 'HomeController'
+		}).
             state('acces', {
                 url: '/access?redirect',
                 templateUrl: '_inc/login.html'
