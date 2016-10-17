@@ -14,7 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::post('auth/facebook', 'Auth\AuthController@facebook');
+Route::post('auth/login', 'Auth\AuthController@login');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::post('auth/signup', 'Auth\AuthController@signup');
 
 Route::resource('salle', 'sallesController');
 

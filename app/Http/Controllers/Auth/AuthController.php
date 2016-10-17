@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers\Auth;
 
+//use Auth;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
+
+
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
+use GuzzleHttp;
+use GuzzleHttp\Subscriber\Oauth\Oauth1;
 
 class AuthController extends Controller
 {
@@ -69,4 +78,37 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    /**
+     * Create Email and Password Account.
+     */
+    public function signup(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return response()->json(['message' => $validator->messages()], 400);
+        }
+        $user = new User;
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+        return response()->json(['token' => $this->createToken($user)]);
+    }
+
+
+
+    //  log out
+    public function getLogout()
+    {
+        Auth::logout();
+    }
+
+
+
+
 }

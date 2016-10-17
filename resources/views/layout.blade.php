@@ -117,6 +117,8 @@
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/index.js"></script>
     <script type="text/javascript" src="app/home/HomeController.js"></script>
+    <script type="text/javascript" src="app/inscription/InscriptionController.js"></script>
+
 
 
 

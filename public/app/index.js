@@ -27,6 +27,7 @@ angular.module('index', [])
             $auth.signup({
                 name: user.name,
                 email: user.email,
+                //gender: user.gender,
                 password: user.password
             })
                 .then(function(){

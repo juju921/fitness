@@ -4,6 +4,7 @@ angular.module('app',[
     'index',
     'restangular',
     'satellizer',
+    'app.inscription',
     'angularFileUpload',
 	'app.home'
     // 'angular-stripe',
@@ -22,8 +23,16 @@ angular.module('app',[
             state('acces', {
                 url: '/access?redirect',
                 templateUrl: '_inc/login.html'
+            }).
+
+            state('inscription',{
+                url:'/inscription',
+                templateUrl: '/app/inscription/inscription.html',
+                controller: 'InscriptionController'
             })
-        $urlRouterProvider.otherwise('/');
+
+
+            $urlRouterProvider.otherwise('/');
 
         RestangularProvider.setBaseUrl('/api/v1');
 

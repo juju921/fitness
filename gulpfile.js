@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-
+            require('laravel-elixir-browser-sync');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -23,5 +23,9 @@ elixir(function(mix) {
         .copy('node_modules/angular-file-upload/dist/angular-file-upload.min.js', 'public/js')
         .copy('node_modules/moment/moment.js','public/js')
         .copy('bower_components/lodash/lodash.js','public/js');
+
+
+
+
 
 });

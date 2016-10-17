@@ -8,7 +8,9 @@
     "bootstrap-sass": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
-    "laravel-elixir": "^5.0.0"
+    "laravel-elixir": "^5.0.0",
+    "laravel-elixir-browser-sync": "^1.0.0",
+    "laravel-elixir-livereload": "^1.1.6"
   },
   "dependencies": {
     "angular": "^1.5.8",
