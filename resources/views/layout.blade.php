@@ -109,7 +109,7 @@
     <script src="{{ url('/js/angular-file-upload.min.js') }}"></script>
     {{--<script type="text/javascript" src="{{ url('/js/angular-stripe.js') }}"></script>--}}
     {{--<script type="text/javascript" src="{{ url('/js/angular-credit-cards.js') }}"></script>--}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js
 
 "></script>
 
