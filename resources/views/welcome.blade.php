@@ -4,4 +4,4 @@
 
 @section('section')
 
-    @endsection
+@endsection

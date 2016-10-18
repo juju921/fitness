@@ -19,9 +19,31 @@ Route::post('auth/login', 'Auth\AuthController@login');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::post('auth/signup', 'Auth\AuthController@signup');
 
+
+
+
+//Role
+Route::post('role', 'JwtAuthenticateController@createRole');
+Route::post('permission', 'JwtAuthenticateController@createPermission');
+Route::post('assign-role', 'JwtAuthenticateController@assignRole');
+Route::post('attacregisterh-permission', 'JwtAuthenticateController@attachPermission');
+Route::post('check', 'JwtAuthenticateController@checkRoles');
+
+Route::group(['prefix' => 'api', 'middleware' => ['ability:admin,create-users']], function()
+{
+    Route::get('users', 'JwtAuthenticateController@index');
+
+});
+
+Route::post('authenticate', 'JwtAuthenticateController@authenticate');
+
 Route::resource('salle', 'sallesController');
 
 
 Route::auth();
 
 //Route::get('/home', 'HomeController@index');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

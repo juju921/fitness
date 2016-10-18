@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+
+use Zizaco\Entrust\HasRole;//importamos la clase HasRole
+
 class User extends Authenticatable
 {
     /**

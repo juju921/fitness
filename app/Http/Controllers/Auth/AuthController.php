@@ -10,7 +10,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
-
+use \Firebase\JWT\JWT;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -79,6 +79,17 @@ class AuthController extends Controller
         ]);
     }
 
+    protected function createToken($user)
+    {
+        $payload = [
+            'sub' => $user->id,
+            'iat' => time(),
+            'exp' => time() + (2 * 7 * 24 * 60 * 60)
+        ];
+        return JWT::encode($payload, \Config::get('app.token_secret'));
+    }
+
+
     /**
      * Create Email and Password Account.
      */
@@ -99,6 +110,8 @@ class AuthController extends Controller
         $user->save();
         return response()->json(['token' => $this->createToken($user)]);
     }
+
+
 
 
 
