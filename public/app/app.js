@@ -6,9 +6,8 @@ angular.module('app',[
     'satellizer',
     'app.inscription',
     'angularFileUpload',
-	'app.home'
-    // 'angular-stripe',
-    // 'credit-cards'
+	'app.home',
+    'app.Signup',
 	])
 
 
@@ -29,6 +28,11 @@ angular.module('app',[
                 url:'/inscription',
                 templateUrl: '/app/inscription/inscription.html',
                 controller: 'InscriptionController'
+            }).
+            state('signup',{
+                url:'/signup',
+                templateUrl:'/app/signup/signup.html',
+                controller:'SignupController'
             })
 
 
