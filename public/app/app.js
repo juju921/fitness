@@ -8,6 +8,7 @@ angular.module('app',[
     'angularFileUpload',
 	'app.home',
     'app.Signup',
+    'app.inscriptionsalles',
 	])
 
 
@@ -33,6 +34,12 @@ angular.module('app',[
                 url:'/signup',
                 templateUrl:'/app/signup/signup.html',
                 controller:'SignupController'
+            }),
+
+            state('salles',{
+                url:'/salles',
+                templateUrl:'/app/salles/inscriptionsalles.html',
+                controller:'inscriptionsallesController'
             })
 
 

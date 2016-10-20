@@ -27,8 +27,16 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function Comment()
+
+    /**
+     * One to Many relation
+     *
+     * @return Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function comments()
     {
-        return $this->hasMany('Comments');
+        return $this->hasMany('App\Comment');
     }
+
+
 }

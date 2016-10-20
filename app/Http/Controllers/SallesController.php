@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\salles;
+use App\Salle;
+use App\Comment;
 use App\Http\Requests;
 
 class SallesController extends Controller
 {
     public function index()
     {
-        $salles = Salles::get();
-        return view('salles.index', compact('salles'));
+        $comments = Salle::find('1')->comments;
+
+        return view('salles.index', ['comments'=> $comments]);
     }
 
 

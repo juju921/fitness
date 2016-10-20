@@ -11,13 +11,16 @@
 <link rel="stylesheet" href="style/vendor.css">
 <link rel="stylesheet" href="style/custom.css">
 </head>
-@foreach($salles as $salle)
-    <ul>
-        <li>{{$salle->nom}}</li>
-        <li>{{$salle->email}}</li>
-        <li>{{$salle->adresse}}</li>
-        <li>{{$salle->nom}}</li>
-    </ul>
+{{--@foreach($salles as $salle)--}}
+    {{--<ul>--}}
+        {{--<li>{{$salle->nom}}</li>--}}
+        {{--<li>{{$salle->email}}</li>--}}
+        {{--<li>{{$salle->adresse}}</li>--}}
+        {{--<li>{{$salle->id}}</li>--}}
+    {{--</ul>--}}
+{{--@endforeach--}}
+
+@foreach($comments as $comment)
+{{$comment->commentaire}}
+
 @endforeach
-
-
